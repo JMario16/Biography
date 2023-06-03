@@ -39,10 +39,10 @@ onmouseover="cambiarImagen()" onmouseout="restaurarImagen()">
 <button onclick="location.href='Imagenes.html'">Más de Peter Higgs</button>&nbsp;&nbsp;&nbsp;&nbsp;
 </div><hr size="4" color="white" style="margin-bottom: 0;"></div>
 
-<div style="background-image: url('fondo2.jpg'); background-repeat: no-repeat; background-size: cover; margin-bottom: 10;">
+<div style="background-image: url('fondo2.jpg'); background-repeat: no-repeat; background-size:">
 <h2 style="margin-top: 0;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- - - - Formulario de opinión - - - -</h2><br>
 
-<form method="post">
+<form style="display: inline;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ingrese su nombre: <input type="text" name="nombr"><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ingrese su email: <input type="text" name="mail"><br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Qué le parece nuestra Página?, Qué nos recomienda para mejorar?<br>
@@ -52,12 +52,12 @@ onmouseover="cambiarImagen()" onmouseout="restaurarImagen()">
 Del 1 al 10, que puntuación le da a la página?&nbsp;&nbsp;&nbsp;&nbsp;<select name="calf">
 <option value="uno">1</option><option value="dos">2</option><option value="tre">3</option><option value="cua">4</option>
 <option value="cin">5</option><option value="sei">6</option><option value="sie">7</option><option value="och">8</option>
-<option value="nue">9</option><option value="die">10</option></select><br><br>
+<option value="nue">9</option><option value="die">10</option></select><br><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="confirma()" 
-style="color: white; background-color: #202124; border: none; padding: 8px 16px; cursor: pointer;">Enviar</button>&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="reset" value="Borrar" style="color: white; background-color: #202124; border: none; padding: 8px 16px; cursor: pointer;">
-<br><br></form><hr size="4" color="white" style="margin-bottom: 0;"></div></font>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="Borrar" 
+style="color: white; background-color: #202124; border: none; padding: 8px 16px; cursor: pointer;">&nbsp;&nbsp;&nbsp;&nbsp;
+</form><button onclick="confirma()" style="color: white; background-color: #202124; border: none; padding: 8px 16px; cursor: pointer;">
+Enviar</button><br><br><hr size="4" color="white" style="margin-bottom: 0;"></div></font>
 
 <script>
 function cambiarImagen(){
@@ -75,7 +75,9 @@ contador++; }
 localStorage.setItem("contadorVisitas", contador);
 var pregunta=confirm("¡Gracias por darnos tu opinion! Usted es el usuario numero: "+contador);
 if(pregunta){
-window.location="index.html"; } } }
+window.location="index.html"; } 
+else{
+} } }
 </script>
 
 <div class="footer"><table align="center" cellspacing="10" style="color: #B2720C; background-color: #2E3032; text-shadow: none;">
